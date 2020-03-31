@@ -182,11 +182,71 @@
         <header>
           <h1>Declaring Variables</h1>
         </header>
+        <p>You can declare a variable in two ways:</p>
+        <ul>
+          <li>
+            With the keyword
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var"
+              >var.</a
+            >
+            For example, <code>var x = 42.</code> This syntax can be used to
+            declare both <strong>local</strong> and
+            <strong>global</strong> variables, depending on the
+            <em>execution context.</em>
+          </li>
+          <li>
+            With the keyword
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const"
+              >const</a
+            >
+            or
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let"
+              >let.</a
+            >
+            For example, <code>let y = 13.</code> This syntax can be used to
+            declare a block-scope local variable. (See
+            <a href="#variable_scope">Variable scope</a> below.)
+          </li>
+        </ul>
       </section>
       <section class="main-section" id="variable_scope">
         <header>
           <h1>Variable Scope</h1>
         </header>
+        <p>
+          When you declare a variable outside of any function, it is called a
+          <em>global</em> variable, because it is available to any other code in
+          the current document. When you declare a variable within a function,
+          it is called a <em>local</em>variable, because it is available only
+          within that function.
+        </p>
+        <p>
+          JavaScript before ECMAScript 2015 does not have
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#Block_statement"
+            >block statement</a
+          >
+          scope. Rather, a variable declared within a block is local to the
+          <em>function (or global scope)</em> that the block resides within.
+        </p>
+        <p>
+          For example, the following code will log <code>5</code>, because the
+          scope of <code>x</code> is the global context (or the function context
+          if the code is part of a function). The scope of <code>x</code> is not
+          limited to the immediate <code>if</code> statement block.
+        </p>
+        <code>if (true) { var x = 5; } console.log(x); // x is 5</code>
+        <p>
+          This behavior changes when using the let declaration (introduced in
+          ECMAScript 2015).
+        </p>
+        <code
+          >if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
+          defined</code
+        >
       </section>
       <section class="main-section" id="global_variables">
         <header>
