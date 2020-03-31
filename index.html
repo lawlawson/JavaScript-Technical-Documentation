@@ -7,6 +7,20 @@
     <title>JavaScript Technical Documentation</title>
   </head>
   <body>
+    <nav id="navbar">
+      <header>
+        <h2>JavaScript Documentation</h2>
+      </header>
+      <a href="#introduction">Introduction</a>
+      <a href="#what_you_should_already_know">What You Should Already Know</a>
+      <a href="#javascript_&_java">JavaScript & Java</a>
+      <a href="#hello_world">Hello World</a>
+      <a href="#variables">Variables</a>
+      <a href="#declaring_variables">Declaring Variables</a>
+      <a href="#variable_scope">Variable Scope</a>
+      <a href="#global_variables">Global Variables</a>
+      <a href="#reference">Reference</a>
+    </nav>
     <main id="main-doc">
       <section class="main-section" id="introduction">
         <header>
@@ -252,36 +266,34 @@
         <header>
           <h1>Global Variables</h1>
         </header>
-      </section>
-      <section class="main-section" id="constants">
-        <header>
-          <h1>Constants</h1>
-        </header>
-      </section>
-      <section class="main-section" id="data_types">
-        <header>
-          <h1>Data Types</h1>
-        </header>
-      </section>
-      <section class="main-section" id="if...else_statement">
-        <header>
-          <h1>If...else statement</h1>
-        </header>
-      </section>
-      <section class="main-section" id="while_statement">
-        <header>
-          <h1>While statement</h1>
-        </header>
-      </section>
-      <section class="main-section" id="function_declarations">
-        <header>
-          <h1>Function declarations</h1>
-        </header>
+        <p>
+          Global variables are in fact properties of the <em>global object.</em>
+        </p>
+        <p>
+          In web pages, the global object is <code>window,</code> so you can set
+          and access global variables using the
+          <code><em>window.variable</em></code> syntax.
+        </p>
+        <p>
+          Consequently, you can access global variables declared in one window
+          or frame from another window or frame by specifying the
+          <code>window</code> or <code>frame</code> name. For example, if a
+          variable called <code>phoneNumber</code> is declared in a document,
+          you can refer to this variable from an <code>iframe</code> as
+          <code>parent.phoneNumber.</code>
+        </p>
       </section>
       <section class="main-section" id="reference">
         <header>
           <h1>Reference</h1>
         </header>
+        <p>
+          All the documentation in this page is taken from
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide"
+            >MDN</a
+          >
+        </p>
       </section>
     </main>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
