@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Abel', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
