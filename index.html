@@ -157,11 +157,12 @@
           To get started with writing JavaScript, open the Web Console in
           multi-line mode, and write your first "Hello world" JavaScript code:
         </p>
+        <pre>
         <code
           >(function(){ "use strict"; /* Start of your code */ function
           greetMe(yourName) { alert('Hello ' + yourName); } greetMe('World'); /*
           End of your code */ })();</code
-        >
+        ></pre>
       </section>
       <section class="main-section" id="variables">
         <header>
@@ -224,6 +225,7 @@
             <strong>global</strong> variables, depending on the
             <em>execution context.</em>
           </li>
+          <br />
           <li>
             With the keyword
             <a
@@ -270,15 +272,18 @@
           if the code is part of a function). The scope of <code>x</code> is not
           limited to the immediate <code>if</code> statement block.
         </p>
+        <pre>
         <code>if (true) { var x = 5; } console.log(x); // x is 5</code>
+      </pre>
         <p>
           This behavior changes when using the let declaration (introduced in
           ECMAScript 2015).
         </p>
+        <pre>
         <code
           >if (true) { let y = 5; } console.log(y); // ReferenceError: y is not
           defined</code
-        >
+        ></pre>
       </section>
       <section class="main-section" id="global_variables">
         <header>
